@@ -1,16 +1,17 @@
 import { useState, useCallback, useEffect, useRef } from "react";
 
 function App() {
-  //length
   const [length, setLength] = useState(8);
-  //number checkbox
+
   const [numberAllowed, setNumberAllowed] = useState(false);
-  //charcter checkbox
+
   const [charAllowed, setCharAllowed] = useState(false);
-  //password field
+
   const [password, setPassword] = useState("");
+
   //useRef hook variable for copy logic
   const passwordRef = useRef(null);
+
   //Generating the password -> Logic
   const passwordGenerator = useCallback(() => {
     let pass = "";
